@@ -27,8 +27,10 @@ if ( age >= 18){
 
 console.log(text);
 
+// if and else statement:
 
-// nested if
+// we use the else statement to specify a block of code to be execur]ted if a condition is false.
 
-// you can use an if statement isnide another if statement:
+
+
 
