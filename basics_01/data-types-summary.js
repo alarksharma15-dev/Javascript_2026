@@ -31,10 +31,14 @@ const myFunction = function(){
 
 /**********MEMORY******************** */
 
-// Stack (Premitive) , heap (Non - Premitive)
+// Simple way to think about memory:
+// Stack: stores simple values, such as numbers and strings.
+// Heap: stores objects and arrays, which can hold more data.
+// These are common teaching models; JavaScript handles the details for us.
 
 let myYoutubename = "alarksharmadotcom";
 
+// This makes a separate copy of the string value.
 let anothername = myYoutubename;
 
 console.log(anothername);
@@ -47,6 +51,8 @@ let user = {
 
 let user2 = user;
 
+// Both variables point to the same object, so changing it through either
+// variable can be seen through the other one.
 user2.email = "alark@google.com"
 
 console.log(user.email);
