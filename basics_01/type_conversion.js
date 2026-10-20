@@ -67,4 +67,7 @@ console.log( Boolean("") ); // false
 console.log( Boolean("0") ) // true . a non empty string is always true in JS.
 console.log( Boolean("  ") ); // true , spaces too are considered true  nogt empty.
 
+// "33" => 33
+// "33abc" => NaN
+// "true" => 1  and 'false' => 0
 
