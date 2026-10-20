@@ -63,4 +63,4 @@ null/undefined are converted to numbers: null becomes 0, while undefined becomes
 2) Strings are compared letter-by-letter in the “dictionary” order.
 3) When values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check).
 4) The values null and undefined are equal == to themselves and each other, but do not equal any other value.
-5) Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea.
+5) Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea. */
