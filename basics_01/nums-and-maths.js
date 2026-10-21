@@ -94,7 +94,7 @@ console.log("Smallest:", smallest);
         console.log(Math.ceil(aizu));
         console.log(Math.trunc(aizu));
 
-/* 2. 
+/* 2. */
 // prompt() displays a question in the browser and returns the user's input as text.
 // If the user presses Cancel, prompt() returns null instead.
 const input = prompt("Enter a positive number:");
@@ -121,7 +121,7 @@ if (input !== null && input.trim() !== "" && Number.isFinite(number) && number >
   // alert() displays an error message when the input is not a valid positive number.
   alert("Please enter a valid positive number.");
 }
-*/
+
  /* 3 */ let angle = 60;
          let angleRad = angle * ( Math.PI / 180 );
          console.log(`sin${angle}:`,Math.sin(angleRad) );
