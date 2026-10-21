@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Tells the browser this page uses modern HTML. -->
+<html lang="en">
+<!-- The page content is written in English. -->
+<head>
+    <!-- Allows the page to display text using a wide range of characters. -->
+    <meta charset="UTF-8">
+    <!-- Makes the page fit and scale correctly on mobile screens. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the title shown in the browser tab. -->
+    <title>My website</title>
+    <!-- Loads the CSS file that controls the page's appearance. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Prompts the user to enter their age. -->
+    <label>Enter your age:</label><br>
+    <!-- Provides a text field; JavaScript reads its value using the id "myText". -->
+    <input type="text" id="myText"><br>
+    <!-- Clicking this button runs the age-checking code in index.js. -->
+    <button type="submit" id="mySubmit">submit</button>
+    <!-- JavaScript puts the age-check result message inside this paragraph. -->
+    <p id="resultElement"></p>
+    <!-- Loads the JavaScript that reads the age and displays the result. -->
+    <script src="index.js"></script>
+</body>
+</html>
