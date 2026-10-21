@@ -1,0 +1,18 @@
+/* Set the font for the page and center its contents. */
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+
+/* Select the roll button by its HTML id and make it large and rounded. */
+#myButton{
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+/* Apply a large font to all three dice result labels. */
+.mylabels{
+    font-size: 3em;
+}
