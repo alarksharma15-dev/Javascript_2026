@@ -180,58 +180,58 @@ console.log(numbersInOrder);
 
 // Exercise 1: Clean a display name using trim() and toUpperCase().
 const rawName = "   Jordan Lee   ";
-const displayName = /* TODO: clean and uppercase rawName */ "";
+const displayName = rawName.trim().toUpperCase();
 console.log(displayName);
 
 // Exercise 2: Extract the extension from a filename using indexOf() and slice().
 const practiceFilename = "notes.txt";
-const practiceDotPosition = /* TODO: find the position of "." */ 0;
-const practiceExtension = /* TODO: slice from the dot position */ "";
+const practiceDotPosition =  practiceFilename.indexOf(".");
+const practiceExtension = practiceFilename.slice(practiceDotPosition);
 console.log(practiceExtension);
 
 // Exercise 3: Check whether a message contains "urgent" using includes().
 const message = "Please send the urgent report today.";
-const containsUrgent = /* TODO: check the message */ false;
+const containsUrgent = message.includes("urgent");
 console.log(containsUrgent);
 
 // Exercise 4: Replace "sunny" with "cloudy" using replace().
 const weatherSentence = "It is sunny outside.";
-const changedWeather = /* TODO: replace the weather word */ "";
+const changedWeather = weatherSentence.replace("sunny","cloudy");
 console.log("Changed:", changedWeather);
 console.log("Original:", weatherSentence);
 
 // Exercise 5: Count words using trim(), split(), and the length property.
 const sentenceToCount = "  Strings are useful in JavaScript.  ";
-const words = /* TODO: trim and split the sentence into words */ [];
-const wordCount = /* TODO: get the number of words */ 0;
+const words = sentenceToCount.trim().split(" ");
+const wordCount = words.length;
 console.log("Word count:", wordCount);
 
 // Exercise 6: Normalize the username by trimming it and converting it to lowercase.
 const usernameInput = "  Casey99  ";
-const normalizedUser = /* TODO: normalize usernameInput */ "";
+const normalizedUser = usernameInput.trim().toLowerCase();
 console.log(normalizedUser);
 
 // Exercise 7: Split the comma-separated items and trim each item.
 const itemsInput = " tea, coffee , cocoa ";
-const items = /* TODO: split on commas and trim each item */ [];
+const items = itemsInput.split(",").map((tag) => tag.trim());
 console.log(items);
 
 // Exercise 8: Create a simple slug from the title.
 const titleInput = "  My First Web Project  ";
-const titleSlug = /* TODO: trim, lowercase, and replace spaces with hyphens */ "";
+const titleSlug = titleInput.trim().toLowerCase().replace(/\s+/g, "-");
 console.log(titleSlug);
 
 // Exercise 9: Make a six-character order code padded with leading zeroes.
 const orderId = 482;
-const orderCode = /* TODO: convert orderId to a string and use padStart() */ "";
+const orderCode = String(orderId).padStart(6,"0");
 console.log(orderCode);
 
 // Exercise 10: Keep only the first 25 characters of the description.
 const description = "String methods make text processing easier in JavaScript.";
-const descriptionPreview = /* TODO: use slice() to get the first 25 characters */ "";
+const descriptionPreview = description.slice(0,26);
 console.log(descriptionPreview);
 
 // Exercise 11: Extract every group of digits from the text with match().
 const logLine = "User 42 placed order 9081";
-const extractedNumbers = /* TODO: use match() with a global digit pattern */ [];
+const extractedNumbers = logLine.match(/\d+/g);
 console.log(extractedNumbers);
