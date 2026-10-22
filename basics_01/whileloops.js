@@ -179,3 +179,211 @@ while (nameIndex < names.length) {
 if (!foundMina) {
     console.log("Mina was not found.");
 }
+
+//++++++++++++++++++++++++++++++ WRITE IT YOURSELF ++++++++++++++++++++++++++++++
+//
+// For these exercises, the variables and starter values are provided.
+// Write the while-loop syntax and logic yourself in each work area.
+// Try the exercises before looking at the solutions below.
+//
+// EASY
+//
+// 1. Print from 1 up to limit.
+//    Expected output: 1, 2, 3, 4, 5, 6
+const easyLimit = 6;
+let easyCounter = 1;
+// Your code here:
+ while(easyCounter <= easyLimit){
+    console.log(easyCounter);
+    easyCounter++;
+ }
+
+// 2. Print the odd numbers from 1 through oddLimit.
+//    Expected output: 1, 3, 5, 7, 9
+const oddLimit = 9;
+let oddCounter = 1;
+// Your code here:
+ while(oddCounter <= oddLimit){
+    console.log(oddCounter);
+        oddCounter += 2;
+    
+ }
+
+// 3. Add all numbers from 1 through sumLimit.
+//    Print the final sum. Expected output: 55
+const sumLimit = 10;
+let nextNumber = 1;
+let runningSum = 0;
+// Your code here:
+ while(nextNumber <= sumLimit ){
+    runningSum += nextNumber;
+    nextNumber++;
+ }
+ console.log("Sum :",runningSum);
+
+// MEDIUM
+//
+// 4. Print the multiplication table for tableNumber from 1 through 10.
+//    Example: "7 x 1 = 7" ... "7 x 10 = 70"
+const tableNumber = 7;
+let tableMultiplier = 1;
+// Your code here:
+ while(tableMultiplier <= 10){
+    console.log(tableNumber, "x", tableMultiplier, "=", tableMultiplier*tableNumber)
+    tableMultiplier++;
+ }
+
+// 5. Count how many digits are in digitNumber.
+//    Do not convert the number to a string. Expected output: 5
+let digitNumber = 48271;
+let digitCount = 0;
+// Your code here:
+ while(digitNumber >= 1){
+    digitNumber = Math.floor(digitNumber / 10);
+    digitCount++;
+ }
+ console.log("digitcount :",digitcount);
+
+// 6. Reverse the digits of numberToReverse.
+//    Do not convert the number to a string. Expected output: 54321
+let numberToReverse = 12345;
+let reversedNumber = 0;
+// Your code here:
+while (numberToReverse > 0) {
+    const lastDigit = numberToReverse % 10;
+    reversedNumber = reversedNumber * 10 + lastDigit;
+    numberToReverse = Math.floor(numberToReverse / 10);
+}
+
+// INTERVIEW-STYLE LOGIC BUILDING
+//
+// 7. Calculate the factorial of factorialInput.
+//    5! means 5 * 4 * 3 * 2 * 1. Expected output: 120
+const factorialInput = 5;
+let factorialCounter = 1;
+let factorialResult = 1;
+// Your code here:
+while (factorialCounter <= factorialInput) {
+    factorialResult *= factorialCounter;
+    factorialCounter++;
+}
+
+// 8. Print FizzBuzz from 1 through fizzBuzzLimit:
+//    - "FizzBuzz" for multiples of both 3 and 5
+//    - "Fizz" for multiples of 3
+//    - "Buzz" for multiples of 5
+//    - the number otherwise
+//    Check the multiple-of-both case before the individual cases.
+const fizzBuzzLimit = 15;
+let fizzBuzzNumber = 1;
+// Your code here:
+while (fizzBuzzNumber <= fizzBuzzLimit) {
+    if (fizzBuzzNumber % 3 === 0 && fizzBuzzNumber % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (fizzBuzzNumber % 3 === 0) {
+        console.log("Fizz");
+    } else if (fizzBuzzNumber % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(fizzBuzzNumber);
+    }
+
+    fizzBuzzNumber++;
+}
+// 9. Find the largest number in the array without using Math.max().
+//    Expected output: 42
+const numbersToSearch = [12, 5, 42, 19, 8];
+let searchIndex = 0;
+let largestNumber = numbersToSearch[0];
+// Your code here:
+while (searchIndex < numbersToSearch.length) {
+    if (numbersToSearch[searchIndex] > largestNumber) {
+        largestNumber = numbersToSearch[searchIndex];
+    }
+
+    searchIndex++;
+}
+
+console.log("Largest number:", largestNumber);
+
+
+//++++++++++++++++++++++++++++++ EXTRA EXERCISE SOLUTIONS ++++++++++++++++++++++++++++++
+//
+// Compare your attempt with the solutions below after you have tried each one.
+
+// Exercise 1: Print from 1 up to easyLimit.
+while (easyCounter <= easyLimit) {
+    console.log(easyCounter);
+    easyCounter++;
+}
+
+// Exercise 2: Print odd numbers through oddLimit.
+while (oddCounter <= oddLimit) {
+    console.log(oddCounter);
+    oddCounter += 2;
+}
+
+// Exercise 3: Sum numbers from 1 through sumLimit.
+while (nextNumber <= sumLimit) {
+    runningSum += nextNumber;
+    nextNumber++;
+}
+
+console.log("Sum:", runningSum);
+
+// Exercise 4: Print a multiplication table.
+while (tableMultiplier <= 10) {
+    console.log(tableNumber, "x", tableMultiplier, "=", tableNumber * tableMultiplier);
+    tableMultiplier++;
+}
+
+// Exercise 5: Count digits using division by 10.
+while (digitNumber >= 1) {
+    digitNumber = Math.floor(digitNumber / 10);
+    digitCount++;
+}
+
+console.log("Digit count:", digitCount);
+
+// Exercise 6: Reverse digits using the remainder and division operators.
+while (numberToReverse > 0) {
+    const lastDigit = numberToReverse % 10;
+    reversedNumber = reversedNumber * 10 + lastDigit;
+    numberToReverse = Math.floor(numberToReverse / 10);
+}
+
+console.log("Reversed number:", reversedNumber);
+
+// Exercise 7: Calculate a factorial.
+while (factorialCounter <= factorialInput) {
+    factorialResult *= factorialCounter;
+    factorialCounter++;
+}
+
+console.log("Factorial:", factorialResult);
+
+// Exercise 8: Print FizzBuzz.
+while (fizzBuzzNumber <= fizzBuzzLimit) {
+    if (fizzBuzzNumber % 3 === 0 && fizzBuzzNumber % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (fizzBuzzNumber % 3 === 0) {
+        console.log("Fizz");
+    } else if (fizzBuzzNumber % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(fizzBuzzNumber);
+    }
+
+    fizzBuzzNumber++;
+}
+
+// Exercise 9: Find the largest value in an array.
+while (searchIndex < numbersToSearch.length) {
+    if (numbersToSearch[searchIndex] > largestNumber) {
+        largestNumber = numbersToSearch[searchIndex];
+    }
+
+    searchIndex++;
+}
+
+console.log("Largest number:", largestNumber);
