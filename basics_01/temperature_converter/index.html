@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main class="page-shell">
+        <section class="converter-card" aria-labelledby="pageTitle">
+            <header class="card-header">
+                <div>
+                    <p class="eyebrow"><span class="status-dot"></span> QUICK CONVERTER</p>
+                    <h1 id="pageTitle">Temperature<br>made simple.</h1>
+                    <p class="intro">A little change in scale. A whole new perspective.</p>
+                </div>
+                <div class="temperature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <path d="M19 28.8V11a5 5 0 0 1 10 0v17.8a10 10 0 1 1-10 0Z" stroke="currentColor" stroke-width="2.5"/>
+                        <path d="M24 18v16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="24" cy="37" r="4" fill="currentColor"/>
+                        <path d="M31 16h4M31 22h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </header>
+
+            <form id="converterForm">
+                <label class="field-label" for="temperatureInput">Temperature</label>
+                <div class="temperature-field">
+                    <input
+                        id="temperatureInput"
+                        name="temperature"
+                        type="number"
+                        step="any"
+                        value="0"
+                        placeholder="Enter a value"
+                        required
+                    >
+                    <span id="inputUnit" class="input-unit" aria-hidden="true">°C</span>
+                </div>
+
+                <fieldset class="conversion-fieldset">
+                    <legend>Convert from</legend>
+                    <label class="conversion-option">
+                        <input type="radio" name="conversion" value="celsius-to-fahrenheit" checked>
+                        <span class="radio-mark" aria-hidden="true"></span>
+                        <span class="option-copy">
+                            <span class="option-title">Celsius</span>
+                            <span class="option-subtitle">to Fahrenheit</span>
+                        </span>
+                        <span class="option-symbol" aria-hidden="true">°C</span>
+                    </label>
+                    <label class="conversion-option">
+                        <input type="radio" name="conversion" value="fahrenheit-to-celsius">
+                        <span class="radio-mark" aria-hidden="true"></span>
+                        <span class="option-copy">
+                            <span class="option-title">Fahrenheit</span>
+                            <span class="option-subtitle">to Celsius</span>
+                        </span>
+                        <span class="option-symbol" aria-hidden="true">°F</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit">
+                    <span>Convert temperature</span>
+                    <span class="button-arrow" aria-hidden="true">↗</span>
+                </button>
+            </form>
+
+            <section class="result-panel" aria-label="Conversion result">
+                <div class="result-heading">
+                    <span class="result-label">RESULT</span>
+                    <span class="result-decoration" aria-hidden="true">LIVE CONVERSION</span>
+                </div>
+                <p id="result" class="result" aria-live="polite" aria-atomic="true">32°F</p>
+                <p class="result-caption">Your converted temperature</p>
+            </section>
+            <p id="formulaNote" class="formula-note">Celsius to Fahrenheit <span>·</span> (°C × 9/5) + 32</p>
+        </section>
+        <p class="page-footer">Made for curious minds <span>✳</span></p>
+    </main>
+</body>
+</html>

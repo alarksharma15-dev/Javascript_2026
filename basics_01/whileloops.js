@@ -242,7 +242,7 @@ let digitCount = 0;
     digitNumber = Math.floor(digitNumber / 10);
     digitCount++;
  }
- console.log("digitcount :",digitcount);
+ console.log("digitcount :",digitCount);
 
 // 6. Reverse the digits of numberToReverse.
 //    Do not convert the number to a string. Expected output: 54321
