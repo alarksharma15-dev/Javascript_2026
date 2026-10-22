@@ -158,11 +158,20 @@ console.log("Double 9:", doubleNumber(9));
 // 1. Define a function named printFavoriteColor that prints your favorite
 //    color. Call the function once.
 // Your code here:
+        function printFavoriteColor(){
+            console.log("Black");
+        }
+    printFavoriteColor()
+
 
 // 2. Define a function named printGreeting that has a name parameter and
 //    prints a greeting containing that name. Call it with "Jordan".
 //    Expected message: Hello, Jordan!
 // Your code here:
+      function printGreeting(name){
+            console.log(`Hello ${name} !`);
+      }
+      printGreeting(Jordan);
 
 // LEVEL 2 - PARAMETERS AND RETURN VALUES
 //
@@ -172,17 +181,30 @@ console.log("Double 9:", doubleNumber(9));
 const subtractFirst = 12;
 const subtractSecond = 5;
 // Your code here:
+      function subtractNumbers(first, second){
+        return first - second;
+      }
+      console.log(subtractNumbers(subtractFirst,subtractSecond));
 
 // 4. Define getSquare(number) and return the number multiplied by itself.
 //    Expected: 49
 const squareInput = 7;
 // Your code here:
+      function getSquare(number){
+        return number * number;
+      }
+    console.log(getSquare(squareInput));
+
 
 // 5. Define getArea(width, height) and return the rectangle's area.
 //    Expected: 42
 const rectangleWidth = 6;
 const rectangleHeight = 7;
 // Your code here:
+function getArea(width, height){
+    return width * height;
+}
+console.log(getArea(rectangleHeight,rectangleWidth));
 
 // LEVEL 3 - CONDITIONS
 //
@@ -192,6 +214,10 @@ const rectangleHeight = 7;
 //    Expected: true
 const positiveInput = 9;
 // Your code here:
+    function isPositive(number){
+        return number > 0;
+    }
+    console.log(isPositive(positiveInput));
 
 // 7. Define getLargerNumber(first, second) and return whichever number is
 //    larger. If they are equal, either value is fine.
@@ -199,6 +225,15 @@ const positiveInput = 9;
 const comparisonFirst = 11;
 const comparisonSecond = 18;
 // Your code here:
+    function getLargerNumber(first, second){
+        if(first > second){
+            return first;
+        }
+        else{
+            return second;
+        }
+    }
+    console.log(getLargerNumber(comparisonFirst,comparisonSecond));
 
 // 8. Define getGrade(score) and return:
 //    "A" for 90 or more, "B" for 80-89, "C" for 70-79,
@@ -206,28 +241,65 @@ const comparisonSecond = 18;
 //    Expected: "B"
 const gradeScore = 84;
 // Your code here:
+function getGrade(score) {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else {
+        return "Needs practice";
+    }
+}
 
+console.log(getGrade(gradeScore)); 
 // LEVEL 4 - LOOPS INSIDE FUNCTIONS
 //
 // 9. Define sumTo(number) and return the sum of all whole numbers from 1
 //    through number. Use a loop.
 //    Expected: 55
 const sumToInput = 10;
-// Your code here:
 
+function sumTo(number) {
+    let sum = 0;
+
+    for (let i = 1; i <= number; i++) {
+        sum += i;
+    }
+
+    return sum;
+}
+
+console.log(sumTo(sumToInput)); // 55
 // 10. Define getFactorial(number) and return its factorial using a loop.
 //     The factorial of 5 is 5 * 4 * 3 * 2 * 1.
 //     Expected: 120
 const factorialInput = 5;
 // Your code here:
-
+let factorial = 1;
+function getFactorial(number){
+    for(let i = 1; i <= number; i++){
+        factorial *= i;
+    }
+    return factorial;
+}
+console.log(getFactorial(factorialInput));
 // 11. Define countDigits(number) and return how many digits it has.
 //     Do not convert the number to a string. Assume number is positive.
 //     Hint: Math.floor(number / 10) removes the last digit.
 //     Expected: 5
-const digitCountInput = 58304;
+let digitCountInput = 58304;
 // Your code here:
-
+let numberOfDigits = 0;
+function countDigits(number){
+    let numberOfDigits = 0;
+           for(;number > 0; number = Math.floor(number / 10)){
+          numberOfDigits++;
+               }
+          return numberOfDigits;
+         }
+console.log(countDigits(digitCountInput));
 // LEVEL 5 - LOGIC-BUILDING CHALLENGES
 //
 // 12. Define isPrime(number) and return true if number is prime, otherwise
