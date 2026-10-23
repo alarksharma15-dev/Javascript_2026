@@ -416,37 +416,45 @@ console.log(RemovedItem);
 // 22. Use splice() to replace "small" with "medium". Print the changed array.
 const sizesToChange = ["small", "large"];
 // Your code here:
-
+console.log(sizesToChange.splice(0, 1,"medium"))
 // 23. Use concat() to combine these arrays into a new array. Print the result
 //     and confirm the original arrays have not changed.
 const morningTasks = ["wake up", "eat breakfast"];
 const eveningTasks = ["eat dinner", "sleep"];
 // Your code here:
-console.log()
+const newarray = morningTasks.concat(eveningTasks);
+
+console.log(newarray);
+console.log(morningTasks);
+console.log(eveningTasks);
 // 24. Use the spread operator to copy startNumbers and add 4 and 5 to the end.
 //     Print both arrays to see that the original is unchanged.
 const startNumbers = [1, 2, 3];
 // Your code here:
-
+const updatedarray = [...startNumbers, 4, 5];
+console.log(startNumbers);
+console.log(updatedarray);
 // 25. Use flat() to make a one-level array from nestedOnce.
 const nestedOnce = [1, [2, 3], [4, 5]];
 // Your code here:
-
+console.log(nestedOnce.flat(1));
 // 26. Use flat(Infinity) to flatten every level of deeplyNested.
 const deeplyNested = [1, [2, [3, [4]]]];
 // Your code here:
-
+console.log(deeplyNested.flat(Infinity));
 // 27. Use Array.isArray() to check which values below are arrays.
 //     Print the result for each value.
 const possibleArray = [1, 2, 3];
 const possibleNotArray = "hello";
 // Your code here:
-
+console.log(Array.isArray(possibleArray));
+console.log(Array.isArray(possibleNotArray));
 // 28. Use Array.from() to turn the word into an array of characters.
 //     Expected: ["c", "o", "d", "e"]
 const wordToConvert = "code";
 // Your code here:
-
+const arrayofword = Array.from(wordToConvert);
+console.log(arrayofword);
 // 29. Use Array.from() with an array-like object and a mapping function to
 //     create [0, 10, 20, 30, 40].
 //     Hint: give the object a length of 5, then multiply each index by 10.
@@ -457,3 +465,5 @@ const firstItem = "pen";
 const secondItem = "notebook";
 const thirdItem = "eraser";
 // Your code here:
+const brandnewarray = Array.of(firstItem,secondItem,thirdItem);
+console.log(brandnewarray);
